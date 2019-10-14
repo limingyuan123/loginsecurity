@@ -3,9 +3,22 @@
 import Vue from 'vue'
 import App from './App'
 import router from './router'
+import ElementUI from 'element-ui'
+
+
+import {getRequest} from "./utils/api";
+import {postRequest} from "./utils/api";
+import {deleteRequest} from "./utils/api";
+import {putRequest} from "./utils/api";
+
+Vue.prototype.getRequest = getRequest;
+Vue.prototype.postRequest = postRequest;
+Vue.prototype.deleteRequest = deleteRequest;
+Vue.prototype.putRequest = putRequest;
 
 Vue.config.productionTip = false
 
+Vue.use(ElementUI)
 /* eslint-disable no-new */
 new Vue({
   el: '#app',
